@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title><%= title || 'Auth System' %></title>
+
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css">
+</head>
+
+<body>
+
+<nav class="nav-main">
+    <div class="nav-wrapper container">
+
+        <a href="/dashboard"
+           class="brand-logo">
+            Auth<span>System</span>
+        </a>
+
+        <a href="#"
+           data-target="mobile-nav"
+           class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+
+            <li>
+                <a href="/dashboard">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="/profile">
+                    Mi cuenta
+                </a>
+            </li>
+
+            <li id="adminNav">
+                <a href="/admin">
+                    Administración
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                   onclick="logout()">
+                    Cerrar sesión
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-nav">
+
+    <li>
+        <a href="/dashboard">
+            Dashboard
+        </a>
+    </li>
+
+    <li>
+        <a href="/profile">
+            Mi cuenta
+        </a>
+    </li>
+
+    <li id="adminNavMobile">
+        <a href="/admin">
+            Administración
+        </a>
+    </li>
+
+    <li>
+        <a href="#"
+           onclick="logout()">
+            Cerrar sesión
+        </a>
+    </li>
+
+</ul>

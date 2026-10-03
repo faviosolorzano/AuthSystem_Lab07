@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css">
+</head>
+
+<body>
+
+<nav class="nav-main">
+    <div class="nav-wrapper container">
+
+        <a href="/dashboard"
+           class="brand-logo">
+            Auth<span>System</span>
+        </a>
+
+        <a href="#"
+           data-target="mobile-nav"
+           class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+
+            <li class="active">
+                <a href="/dashboard">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="/profile">
+                    Mi cuenta
+                </a>
+            </li>
+
+            <li id="adminNav">
+                <a href="/admin">
+                    Administración
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                   onclick="logout()">
+                    Cerrar sesión
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-nav">
+
+    <li>
+        <a href="/dashboard">
+            Dashboard
+        </a>
+    </li>
+
+    <li>
+        <a href="/profile">
+            Mi cuenta
+        </a>
+    </li>
+
+    <li id="adminNavMobile">
+        <a href="/admin">
+            Administración
+        </a>
+    </li>
+
+    <li>
+        <a href="#"
+           onclick="logout()">
+            Cerrar sesión
+        </a>
+    </li>
+
+</ul>
+
+
+<main class="dashboard-container">
+
+    <div class="container">
+
+        <!-- ENCABEZADO -->
+
+        <section class="dashboard-header">
+
+            <div>
+
+                <span class="dashboard-label">
+                    PANEL PRINCIPAL
+                </span>
+
+                <h4>
+                    Bienvenido,
+                    <strong id="userName">
+                        Usuario
+                    </strong>
+                </h4>
+
+                <p>
+                    Administra tu información y revisa
+                    las opciones disponibles de tu cuenta.
+                </p>
+
+            </div>
+
+            <a href="/profile"
+               class="btn profile-button">
+
+                <i class="material-icons left">
+                    person
+                </i>
+
+                Mi perfil
+
+            </a>
+
+        </section>
+
+
+        <!-- TARJETAS -->
+
+        <section class="dashboard-grid">
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon blue-icon">
+
+                    <i class="material-icons">
+                        account_circle
+                    </i>
+
+                </div>
+
+                <div>
+
+                    <h5>
+                        Mi cuenta
+                    </h5>
+
+                    <p>
+                        Consulta y actualiza tus datos
+                        personales.
+                    </p>
+
+                    <a href="/profile">
+                        Ver mi perfil
+                        <i class="material-icons">
+                            arrow_forward
+                        </i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon green-icon">
+
+                    <i class="material-icons">
+                        security
+                    </i>
+
+                </div>
+
+                <div>
+
+                    <h5>
+                        Seguridad
+                    </h5>
+
+                    <p>
+                        Tu sesión está protegida mediante
+                        autenticación JWT.
+                    </p>
+
+                    <span class="security-status">
+                        <i class="material-icons">
+                            check_circle
+                        </i>
+
+                        Sesión activa
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMACIÓN -->
+
+        <section class="dashboard-info">
+
+            <div class="info-title">
+
+                <i class="material-icons">
+                    info
+                </i>
+
+                Información de la cuenta
+
+            </div>
+
+            <p>
+                Desde este panel puedes acceder a tu
+                perfil y administrar la información
+                registrada en el sistema.
+            </p>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<footer class="page-footer">
+
+    <div class="container center-align">
+
+        <p>
+            Sistema de autenticación con JWT
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+</script>
+
+<script src="/js/auth.js"></script>
+<script src="/js/dashboard.js"></script>
+
+</body>
+</html>
